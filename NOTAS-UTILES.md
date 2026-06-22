@@ -66,3 +66,21 @@ git push
 ## Servicios PM2 activos
 - email-bot: responde emails con IA (Spacemail IMAP + DeepSeek + Resend)
 - reviews-api: sistema de resenas con respuestas automaticas de IA
+
+## PENDIENTE: Google AdSense (esperar ~2 semanas)
+
+Fecha de lanzamiento web: 20 junio 2026
+Solicitar AdSense aprox: a partir del 5 julio 2026
+
+Prerequisitos (ya cumplidos):
+- HTTPS, politica de privacidad, contenido original, contacto, Analytics
+
+Por que esperar:
+- AdSense rechaza sitios muy nuevos o con poco historial de trafico.
+- Esperar 2-4 semanas da mas chances de aprobacion a la primera.
+
+Como solicitar cuando llegue el momento:
+- Entrar a https://www.google.com/adsense
+- Agregar el sitio charly-tricks.dev
+- Pegar el codigo que den en el <head> (igual que hicimos con Analytics)
+- Esperar revision de Google (puede tardar dias o semanas)
