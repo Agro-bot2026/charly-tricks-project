@@ -8,7 +8,11 @@ from openai import OpenAI
 app = Flask(__name__)
 CORS(app)
 
-DEEPSEEK_API_KEY = "TU_API_KEY_DEEPSEEK"
+# Notificaciones push
+from push_notifications import push_bp
+app.register_blueprint(push_bp)
+
+DEEPSEEK_API_KEY = "sk-7d0cf6d20ab045a69c0808985bce2414"
 client = OpenAI(api_key=DEEPSEEK_API_KEY, base_url="https://api.deepseek.com")
 
 DB = "/root/reviews_api/reviews.db"
