@@ -84,3 +84,18 @@ Como solicitar cuando llegue el momento:
 - Agregar el sitio charly-tricks.dev
 - Pegar el codigo que den en el <head> (igual que hicimos con Analytics)
 - Esperar revision de Google (puede tardar dias o semanas)
+
+## Notificaciones push (temporada de cosecha)
+
+Las claves VAPID estan en /root/reviews_api/vapid_keys.txt (NO subir a GitHub)
+El secreto de envio real esta en push_notifications.py (placeholder: TU_SECRETO_ENVIO)
+
+Para enviar una notificacion a todos los suscriptos:
+  cd /root/reviews_api
+  ./enviar_notificacion.sh "Titulo aca" "Mensaje aca"
+
+Ejemplo dia de cosecha:
+  ./enviar_notificacion.sh "Ya hay uva!" "Empezo la cosecha de Moscatel. Te esperamos!"
+
+Ver cuantos suscriptos hay:
+  python3 -c "import sqlite3; c=sqlite3.connect('/root/reviews_api/reviews.db'); print('Suscriptos:', c.execute('SELECT COUNT(*) FROM push_subscriptions').fetchone()[0])"
