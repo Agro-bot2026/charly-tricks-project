@@ -43,9 +43,16 @@
 <meta name="twitter:image" content="https://i.postimg.cc/WbTyJ2JH/IMG-20260205-WA0011.jpg">
 
 <!-- ═══ FAVICON ═══ -->
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
-<link rel="icon" type="image/png" sizes="144x144" href="/favicon-144.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#FFC700">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Viña San Martín">
+<link rel="apple-touch-icon" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"> -->
+<!-- <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"> -->
+<!-- <link rel="icon" type="image/png" sizes="144x144" href="/favicon-144.png"> -->
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 
@@ -1692,6 +1699,16 @@ cargarResenas();
   } catch(e) { console.error(e); }
 })();
 
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('SW registrado:', reg.scope))
+      .catch(err => console.log('SW error:', err));
+  });
+}
 </script>
 </body>
 </html>
